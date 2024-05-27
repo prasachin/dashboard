@@ -54,9 +54,9 @@ const App = () => {
       {/* <button type="submit">exchange rate</button> */}
       {/* </form> */}
       <h1>Open Lake : Dashboard</h1>
-      <div>The user : {JSON.stringify(data.user.login)}</div>
-      <div>The merge : {JSON.stringify(data.merged)}</div>
-      <div>closed or open: {JSON.stringify(data.state)}</div>
+      <div>The user : {JSON.stringify(data)}</div>
+      {/* <div>The merge : {JSON.stringify(data.merged)}</div>
+      <div>closed or open: {JSON.stringify(data.state)}</div> */}
       {/* <div>The  merge : {JSON.stringify(data.merged)}</div> */}
       {/* <pre>{JSON.stringify(currency, null, 2)}</pre> */}
     </div>
