@@ -12,9 +12,7 @@ const App = () => {
     axios
       .get(baseurl)
       .then((response) => {
-        if (Object.keys(response.data).length !== 0) {
-          setData(response.data);
-        }
+        setData(response.data);
       })
       .catch((error) => {
         setError(error);
@@ -36,8 +34,8 @@ const App = () => {
       </div>
     );
   }
-
-  if (!data) {
+  // console.log(data);
+  if (data === null) {
     return (
       <div
         style={{
