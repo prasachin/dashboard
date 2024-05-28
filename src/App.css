@@ -1,42 +1,73 @@
-#root {
-  max-width: 1280px;
+body {
+  background: #a49d9db1;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0px;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0, 0;
+  background-color: #333;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(218, 4, 4, 0.3);
+  z-index: 1000;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0 0;
+  padding: 0 0;
+  color: white;
+  background-color: black;
+  box-shadow: 0 2px 15px rgba(237, 235, 235, 0.3);
 }
 
-.card {
-  padding: 2em;
+.temp {
+  margin-top: 54px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.leaderboard {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.read-the-docs {
-  color: #888;
+.leaderboard th,
+.leaderboard td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.leaderboard th {
+  background-color: grey;
+}
+
+.leaderboard tr {
+  background-color: grey;
+  transition: all 0.5s ease;
+  border: 10px solid #ddd;
+}
+
+.leaderboard tr:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+  z-index: 1;
+  border: 10px solid;
 }
